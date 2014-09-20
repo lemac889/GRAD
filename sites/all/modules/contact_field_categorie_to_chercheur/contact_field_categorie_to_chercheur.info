@@ -1,0 +1,5 @@
+name = "Contact field Categorie to Chercheur"
+description = "Modifie le label Categorie par Chercheur"
+core = "7.x"
+version = "7.x-1.0"
+dependencies[] = "contact"
