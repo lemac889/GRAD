@@ -82,15 +82,15 @@ $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
-$Oswald:          "Oswald";
 
-@mixin font-menu($size){
-	font-family: $Oswald;
-	font-weight: 300;
+
+@mixin font-menu(){
+	font-family: 'Oswald';
+    font-weight: 300;
 	color: $grad-gray;
 	text-decoration: none;
-	font-size: $size;
 }
+
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
@@ -100,13 +100,24 @@ $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 $base-font-family:	$verdana; // The font family set on the html element.
 $font-body:			$verdana;
 $font-monospace:	$courier;
-$font-titre:		$Oswald;
+
 
 
 
 //
 // Colors, etc.
 //
+
+$basic-text-color: #333;
+
+h1,
+h2,
+h3,
+h4,
+p,
+body {
+	color: $basic-text-color;
+}
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;

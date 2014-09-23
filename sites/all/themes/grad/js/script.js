@@ -21,7 +21,7 @@ Drupal.behaviors.my_custom_behavior = {
 function redimensionnement() {
   var result = document.getElementById('result');
   if("matchMedia" in window) { // Détection
-    if(window.matchMedia("(min-width:560px)").matches) {
+    if(window.matchMedia("(min-width:650px)").matches) {
       $animatemenu = "TRUE";
       //alert("is true");
     } else {

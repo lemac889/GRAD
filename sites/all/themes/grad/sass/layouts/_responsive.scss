@@ -61,7 +61,7 @@ $zen-auto-include-item-base: false;
 }
 
 /* Navigation bar */
-@media all and (min-width: 560px) {
+@media all and (min-width: 650px) {
 $zen-column-count:  12;
   #main {
     /* Move all the children of #main down to make room. */
@@ -71,8 +71,11 @@ $zen-column-count:  12;
   .full_width{
 	  width:100%;
   }
-  .colonne_gauche{
+  .colonne-2-2 {
 	  @include zen-grid-item(8, 5);
+  }
+  .nouvelle-ligne{
+	  @include zen-clear();
   }
   #navigation-full_width{
 	
