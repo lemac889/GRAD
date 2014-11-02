@@ -40,9 +40,10 @@ $legacy-support-for-ie7: false;
 $legacy-support-for-ie8: false;
 
 $page-width: 960px;
+$grad-wide: 1300px;
 $grad-color:#d22627;
 $grad-gray:#666;
-
+$grad-light-gray:#999;
 //
 // Font faces, stacks and sizes.
 //
@@ -56,7 +57,7 @@ $base-font-size:   14px; // The font size set on the root html element.
 $base-line-height: 22px; // This line-height determines the basic unit of vertical rhythm.
 
 $h1-font-size: 2    * $base-font-size;
-$h2-font-size: 1.5  * $base-font-size;
+$h2-font-size: 1.7  * $base-font-size;
 $h3-font-size: 1.17 * $base-font-size;
 $h4-font-size: 1    * $base-font-size;
 $h5-font-size: 0.83 * $base-font-size;
@@ -82,12 +83,12 @@ $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$font-grad:		  Oswald, Helvetica, Arial, "Nimbus Sans L", sans-serif;
 
-
-@mixin font-menu(){
+@mixin font-menu($color){
 	font-family: 'Oswald';
     font-weight: 300;
-	color: $grad-gray;
+	color: $color;
 	text-decoration: none;
 }
 
@@ -119,6 +120,14 @@ body {
 	color: $basic-text-color;
 }
 
+a:link, a:-webkit-any-link {
+	color: $basic-text-color;
+	text-decoration: none;
+}
+a:hover {
+	color: $grad-color;	
+}
+
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
 
@@ -128,6 +137,8 @@ $nav-height: 0px;
 // Tab styling.
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
+
+
 
 
 // =============================================================================

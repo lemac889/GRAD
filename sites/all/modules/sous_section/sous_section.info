@@ -1,0 +1,3 @@
+name = Sous-section
+description = Permet de creer une sous-menu pointant sur des sous-sections.
+core = 7.x

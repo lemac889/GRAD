@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path 
+ *   Which path of the site we're using to display help
+ * @param arg 
+ *   Array that holds the current path as returned from arg() function
+ */
+function sous_section_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#sous_section":
+      return '<p>' . t("Displays links to nodes created on this date") . '</p>';
+      break;
+  }
+} 
+
+/**
+ * Implements hook_block_info().
+ */
+function sous_section_block_info() {
+  $blocks['sous_section'] = array(
+    // The name that will appear in the block list.
+    'info' => t('Menu Sous-Section'),
+    // Default setting.
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  return $blocks;
+}
+
+setlocale(LC_ALL, 'en_US.UTF8');
+function toAscii($str) {
+	$clean = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
+	$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $str);
+	$clean = strtolower(trim($clean, '-'));
+	$clean = preg_replace("/[\/_|+ -]+/", '-', $clean);
+
+	return $clean;
+}
+
+function replace_space($string){
+	/*$result = str_replace(' ', '-', $string);*/
+	$result = toAscii($string);
+	return $result;
+}
+
+
+
+

@@ -8,10 +8,10 @@
  */
 ?>
 
-<div id="page">
+<div id="page" class="no-js">
 
   <header class="header" id="header" role="banner">
-
+<div class="header__wrapper centered">
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
     <?php endif; ?>
@@ -47,7 +47,7 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
-
+</div> <!-- end wrapper-header --> 
   </header>
 
   <div id="main">
@@ -84,9 +84,10 @@
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
+      <div id="main-content-centered-wrapper" class="centered">
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+        <a  name="<?php print replace_space($title); ?>" class="anchor"></a><h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
@@ -97,6 +98,7 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
+      </div><!-- End content-centered-wrapper -->
     </div>
 	</div> <!-- End full_width -->
 	
