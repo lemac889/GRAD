@@ -11,7 +11,7 @@
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    <a name="<?php print replace_space($title); ?>" class="anchor"></a><h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+    <a name="<?php print replace_space($title); ?>" class="anchor"></a><h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 

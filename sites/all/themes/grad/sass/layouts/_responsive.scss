@@ -78,7 +78,6 @@ html, body, #page {
 #header,
 #main,
 #footer {
-
   @include zen-grid-container();
 }
 
@@ -88,6 +87,19 @@ html, body, #page {
 	width: 100%;
 	top: 0;
 }
+/*Marge quand la fenetre est plus petite*/
+#page {
+  #header, 
+  .sous-menu, 
+  #main-content-centered-wrapper, 
+  #footer-centered-wrapper{
+  	  box-sizing: border-box;
+	  padding-left:10px;
+	  padding-right: 10px;
+  }
+  
+}
+
 #main{
 	margin-top: 110px;
 }
@@ -283,7 +295,7 @@ $zen-column-count:  12;
 .colonne-2-2{
   margin-left: auto;
   margin-right: auto;
-  max-width: $page-width;
+  max-width: $grad-wide;
   width: 100%; 
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -293,11 +305,11 @@ $zen-column-count:  12;
   padding-top: 0;
 }
 
-#block-views-carrousel2-block>div,
+.region-highlighted .block-views>div
 {
   margin-left: auto;
   margin-right: auto;
-  max-width: $grad-wide;
+  /*max-width: $grad-wide;*/
   //width: 100%; 
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -306,9 +318,16 @@ $zen-column-count:  12;
   padding-right: 0;
   padding-top: 0;
 }
+.region-highlighted .page-width .centered{
+	max-width: $page-width;
+}
+.region-highligted .full-width .centered{
+	max-width: $grad-wide;
+}
 
 .clear:after {
 	clear: both;
 	content: "";
 	display: block;
 }
+

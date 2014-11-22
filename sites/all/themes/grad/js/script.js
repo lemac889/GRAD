@@ -67,15 +67,16 @@ $("#block-system-main-menu ul").click(function(e){
   
   //-------------------alert("loaded");
 
-        $('#views_slideshow_cycle_main_carrousel2-block img').load(function () {
+        //$('#views_slideshow_cycle_main_carrousel2-block img').load(function () {
+        $('.views_slideshow_cycle_main  img').load(function () {
             var img_height = $(this).height();
              //alert(img_height);
             if (img_height !== 0) {
             //alert(img_height);
             box_height = img_height-10;
-                $('#views_slideshow_cycle_main_carrousel2-block').height(box_height);
-                $('#views_slideshow_cycle_main_carrousel2-block .views-field-title').height(box_height);
-                $('#views_slideshow_cycle_main_carrousel2-block .views-field-title').delay(500).fadeIn('fast');
+                $('.views_slideshow_cycle_main').height(box_height);
+                $('.views_slideshow_cycle_main .views-field-title').height(box_height);
+                $('.views_slideshow_cycle_main .views-field-title').delay(500).fadeIn('fast');
                 //alert($('#views_slideshow_cycle_main_carrousel2-block').height());
                 
                                 return false;
@@ -89,19 +90,25 @@ $('#views_slideshow_cycle_main_carrousel2-block .views-field-title').hide();
 
  
     $(window).resize(function () {
-        $('#views_slideshow_cycle_main_carrousel2-block img').each(function () {
+        //$('#views_slideshow_cycle_main_carrousel2-block img').each(function () {
+        $('.views_slideshow_cycle_main img').each(function () {
             var img_height = $(this).height();
             if (img_height !== 0) {
             //alert(img_height).
             box_height = img_height-10;
-                $('#views_slideshow_cycle_main_carrousel2-block').height(box_height);
-                $('#views_slideshow_cycle_main_carrousel2-block .views-field-title').height(box_height);
-                $('#views_slideshow_cycle_main_carrousel2-block .views-field-title').delay(500).fadeIn('fast');
+                $('.views_slideshow_cycle_main').height(box_height);
+                $('.views_slideshow_cycle_main .views-field-title').height(box_height);
+                $('.views_slideshow_cycle_main .views-field-title').delay(500).fadeIn('fast');
                 //alert($('#views_slideshow_cycle_main_carrousel2-block').height());
                 
-                                return false;
+                return false;
             }
         });
+        
+        //Ce script est spécifiquement pour le carrousel de la page d'accueil
+        
+        
+        
     });
   
   

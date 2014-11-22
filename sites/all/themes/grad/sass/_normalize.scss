@@ -198,6 +198,7 @@ h3 {
   @include adjust-font-size-to( $h3-font-size );
   @include leader(1, $h3-font-size);
   @include trailer(1, $h3-font-size);
+  margin-bottom: 0;
 }
 h4 {
   @include adjust-font-size-to( $h4-font-size );

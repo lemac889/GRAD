@@ -42,8 +42,10 @@ $legacy-support-for-ie8: false;
 $page-width: 960px;
 $grad-wide: 1300px;
 $grad-color:#d22627;
+$grad-dark-gray:#333;
 $grad-gray:#666;
 $grad-light-gray:#999;
+
 //
 // Font faces, stacks and sizes.
 //
@@ -119,6 +121,8 @@ p,
 body {
 	color: $basic-text-color;
 }
+
+
 
 a:link, a:-webkit-any-link {
 	color: $basic-text-color;
