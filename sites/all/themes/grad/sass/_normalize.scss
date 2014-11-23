@@ -546,3 +546,7 @@ table {
   @include leader(1);
   @include trailer(1);
 }
+
+#main-content-centered-wrapper .block{
+	clear: both;
+}

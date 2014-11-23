@@ -596,6 +596,11 @@ table {
   margin-bottom: 1.57143em;
 }
 
+/* line 550, ../sass/_normalize.scss */
+#main-content-centered-wrapper .block {
+  clear: both;
+}
+
 /* Layout rules */
 /**
  * @file
@@ -2130,7 +2135,6 @@ tr.selected td {
 /* line 1083, ../sass/components/_misc.scss */
 .views_slideshow_cycle_main {
   width: 100%;
-  float: left;
   overflow: hidden;
 }
 
@@ -2200,7 +2204,6 @@ tr.selected td {
 /* Ajustement full width theme */
 /* line 1160, ../sass/components/_misc.scss */
 .region-highlighted .sous-menu {
-  margin-top: -1.75em;
   background-color: #999;
   padding: 0.5em 0;
   max-width: 1300px;
@@ -2238,37 +2241,41 @@ tr.selected td {
 
 /* line 1198, ../sass/components/_misc.scss */
 .views-slideshow-controls-bottom {
+  position: relative;
+  height: 0;
+  z-index: 200;
+  padding-right: 10px;
+  box-sizing: border-box;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 1203, ../sass/components/_misc.scss */
+/* line 1208, ../sass/components/_misc.scss */
 .views-slideshow-pager-fields {
-  position: relative;
-  z-index: 200;
   width: 25%;
   margin-left: 75%;
   margin-right: -100%;
+  text-align: right;
 }
-/* line 1209, ../sass/components/_misc.scss */
+/* line 1214, ../sass/components/_misc.scss */
 .views-slideshow-pager-fields .views-slideshow-pager-field-item {
   width: 1em;
   height: 1em;
   border: #d22627 1px solid;
   background-color: #999;
-  float: left;
+  display: inline-block;
   margin-left: 5px;
   margin-top: 0.75em;
   box-sizing: border-box;
 }
-/* line 1219, ../sass/components/_misc.scss */
+/* line 1225, ../sass/components/_misc.scss */
 .views-slideshow-pager-fields .active {
   background-color: #d22627;
 }
 
 /* Page portfolio */
-/* line 1231, ../sass/components/_misc.scss */
+/* line 1237, ../sass/components/_misc.scss */
 .page-projets .view-id-portfolio .views-row {
   width: 32%;
   /*display: inline-block;*/
@@ -2279,7 +2286,7 @@ tr.selected td {
   /*height:300px;*/
   overflow: hidden;
 }
-/* line 1244, ../sass/components/_misc.scss */
+/* line 1250, ../sass/components/_misc.scss */
 .page-projets .view-id-portfolio .views-field-title {
   width: 100%;
   height: 45px;
@@ -2293,18 +2300,18 @@ tr.selected td {
   box-sizing: border-box;
   padding: 5px;
 }
-/* line 1259, ../sass/components/_misc.scss */
+/* line 1265, ../sass/components/_misc.scss */
 .page-projets .view-id-portfolio .views-field-field-image {
   width: 100%;
 }
-/* line 1264, ../sass/components/_misc.scss */
+/* line 1270, ../sass/components/_misc.scss */
 .page-projets .view-id-portfolio .field-content a {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-/* line 1279, ../sass/components/_misc.scss */
+/* line 1285, ../sass/components/_misc.scss */
 .anchor {
   position: relative;
   top: -165px;
@@ -2313,17 +2320,8 @@ tr.selected td {
   clear: both;
 }
 
-/* line 1289, ../sass/components/_misc.scss */
-.page-node .field-description,
-.page-node .page__title {
-  float: left;
-  width: 66.66667%;
-  margin-left: 33.33333%;
-  margin-right: -100%;
-  clear: left;
-}
 /* line 1295, ../sass/components/_misc.scss */
-.page-node .field-date1 {
+.page-node article {
   float: left;
   width: 66.66667%;
   margin-left: 33.33333%;
@@ -2331,12 +2329,16 @@ tr.selected td {
   clear: left;
 }
 /* line 1300, ../sass/components/_misc.scss */
+.page-node .field-date1 {
+  clear: left;
+}
+/* line 1304, ../sass/components/_misc.scss */
 .page-node .tabs-primary {
   clear: both;
 }
 
 /* Page contact ------------------------------ */
-/* line 1309, ../sass/components/_misc.scss */
+/* line 1313, ../sass/components/_misc.scss */
 .contact-form {
   float: left;
   width: 66.66667%;
@@ -2344,16 +2346,16 @@ tr.selected td {
   margin-right: -100%;
   clear: left;
 }
-/* line 1313, ../sass/components/_misc.scss */
+/* line 1317, ../sass/components/_misc.scss */
 .contact-form input[type="text"] {
   width: 100%;
 }
-/* line 1317, ../sass/components/_misc.scss */
+/* line 1321, ../sass/components/_misc.scss */
 .contact-form textarea {
   height: 300px;
 }
 
-/* line 1323, ../sass/components/_misc.scss */
+/* line 1327, ../sass/components/_misc.scss */
 .liste-rapprochee .view-content div.views-row {
   margin-bottom: 30px;
 }

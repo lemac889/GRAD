@@ -52,11 +52,19 @@ function grad_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
+
 function grad_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  $node = menu_get_object();
+  if (isset($node->nid) && $node->type == 'chercheur') {
+    $nom_prenom = $node->field_pr_nom['und'][0]['value'];
+	$nom_famille = $node->title;
+
+    $variables['title'] = $nom_prenom . " " . $nom_famille;
+    //$variables['title'] = $data;
+    //$variables['title_suffix'] = field_view_field('node', $node, 'field_pr_nom');
+  }
 }
-// */
+
 
 /**
  * Override or insert variables into the node templates.
